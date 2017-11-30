@@ -23,8 +23,10 @@ addons:
 #before_install:
 
 install:
+  - BUILD_HOME=`pwd`
   - cd Proceso\ ETL
   - npm install -g .
+  - cd $BUILD_HOME
 
 script:
   - sonar-scanner
